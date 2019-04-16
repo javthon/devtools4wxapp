@@ -1,0 +1,13 @@
+
+<view class="container">
+  <block style='text-align:left;align:left;'><image style="width:50px;height:50px;margin-left: -90%;" src="./logout.png" background-size="cover" bindtap='logout'></image></block>
+  <scroll-view class="list" scroll-y>
+      <view wx:for-items="{{databaseArray}}" wx:key="item" wx:for-index="index">
+          <view class="item" data-name="{{item.table_schema}}" bindtap='showTables'>
+                  <view class="center">
+                     <text class="index">{{item.table_schema}}</text>
+                  </view>
+          </view>
+        </view>
+    </scroll-view>
+</view>

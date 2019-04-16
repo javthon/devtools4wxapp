@@ -1,0 +1,12 @@
+
+<view class="container">
+  <scroll-view class="list" scroll-y>
+      <view wx:for="{{tableArray}}" wx:key="item" wx:for-index="index" wx:for-item="item">
+          <view class="item" data-table="{{item['Tables_in_'+database]}}" bindtap='showTables'>
+                  <view class="center">
+                     <text class="index">{{item['Tables_in_'+database]}}</text>
+                  </view>   
+          </view>
+        </view>
+    </scroll-view>
+</view>

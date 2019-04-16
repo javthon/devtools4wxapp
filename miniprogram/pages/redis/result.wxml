@@ -1,0 +1,18 @@
+<view class='container'>
+<view class="opertion">
+        <button type='primary' bindtap='refresh' size="mini" class="button" style='margin-left:10px;'>刷新</button>
+          <button type='primary' bindtap='showInput' size="mini" class="button" style='margin-left:5px;margin-right 5px; left:7%;'>重命名</button>
+          <button type='warn' bindtap='deleteData' size="mini" class="button" style='margin-left:5px;margin-right 5px; left:16%;' >删除</button>
+          <button type='primary' bindtap='updateData' size="mini" class="button" style='margin-left:5px;margin-right 5px; left:23%'>更新</button>
+          <view class="{{inputVisible?'inputVisible':'inputInVisible'}}">
+      <input placeholder='给key取个名字吧' style='width:60%;height:30px;border:1px solid #CCCCCC;border-radius:5px;display:inline;margin-left:3px;' bindinput='inputNewKey' value='{{newKey}}'></input>
+      <button type='primary' bindtap='renameData' size="mini" class="button" style='margin-left:5px;'>确定</button>
+      <button type='primary' bindtap='cancelSave' size="mini" class="button" style='margin-left:5px;'>取消</button>
+    </view>
+          <view class="divLine"></view>
+          </view>
+        <scroll-view style='height:500px;' scroll-y>
+  <textarea type="text" style='width: 100%;color:white' bindinput="inputData" maxlength="-1" auto-height  value='{{result}}'  />
+    </scroll-view>
+  <view class="divLine"></view>
+</view>

@@ -1,0 +1,7 @@
+<view>
+
+  <scroll-view class="content" scroll-top="{{scrollTop}}" scroll-y>
+    <text>{{result}}</text>
+  </scroll-view>
+  <textarea type="text" style='width: 100%;color:white;' bindinput="inputBash" auto-height rows="1" value='{{bash}}' bindlongtap='reset' placeholder="在此输入命令按回车发送，长按此处重新登录" />
+</view>

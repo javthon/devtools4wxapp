@@ -1,0 +1,29 @@
+
+<view class="container">
+<view class="opertion">
+<button type='primary' bindtap='navigateBack' size="mini" class="button" style='margin-left:5px;margin-right 5px;' >返回</button>
+  <button type='primary' bindtap='queryDatabase' size="mini" class="button" style='margin-left:5px;margin-right 5px; left:62%;' bindtap='saveRecord'>保存</button>
+</view>
+</view>
+<view class="table-wrapper">
+    <table class="fl-table">
+        <thead>
+          
+          <tr wx:for="{{columnHeader}}" wx:for-item="item" wx:key="item" wx:for-index="index">
+              <th>
+              <text style='color:red' wx:if="{{item.isKey}}">*</text>
+              {{item.key}}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+              <td wx:for="{{columnData}}" wx:key="cell" wx:for-item="cell" wx:for-index="subindex">
+                <text wx:if="{{cell.isKey}}">{{cell.key}}</text>
+                <input wx:else type="text" value='{{cell.key}}' data-value='{{subindex}}' bindinput='editRecord'/>
+              </td>
+          </tr>
+        </tbody>
+    </table>
+</view>
+
+

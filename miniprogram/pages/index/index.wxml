@@ -1,0 +1,25 @@
+<!--index.wxml-->
+<view class="container">
+      <view class='item'>
+       <button bindtap="jumpDatabase" class="button medium gray rounded">MySQL连接工具</button>
+       </view>
+       <view class='item'>
+       <button bindtap="jumpLinux" class="button medium blue rounded">Linux连接工具</button>
+       </view>
+       <view class='item'>
+       <button bindtap="jumpRedis" class="button medium green rounded">Redis连接工具</button>
+       </view>
+       <view class='item'>
+       <button bindtap="jumpLab" class="button medium yellow rounded">实验室</button>
+       </view>
+       <view class='item'>
+       <button bindtap="jumpCalculator" class="button medium white rounded">计算器</button>
+       </view>
+       <view class='item'>
+       <button bindtap="jumpAPI" class="button medium purple rounded">API手册</button>
+       </view>
+       <view class='item'>
+       <button bindtap='jumpIntroduction' class="button medium orange rounded"><text>使用说明</text></button>
+       </view>
+</view>
+

@@ -1,0 +1,26 @@
+<view class="table-wrapper">
+    <table class="fl-table">
+        <thead>
+        <tr>
+            <th>序号</th>
+            <th>名称</th>
+            <th>语句</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr wx:for-items="{{savedSqls}}" wx:key="item" wx:for-index="index">
+            <td>{{index+1}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.value}}</td>
+            <td>
+            <button type='primary' bindtap='chooseSql' data-sql="{{item.value}}" size="mini" class="button">选择</button>
+            <button type='primary' bindtap='deleteSql' type="warn" data-index="{{index}}" size="mini" class="button" style='margin-left:10px;'>删除</button>
+            </td>
+           
+        </tr>
+
+       
+        </tbody>
+   </table>
+</view>

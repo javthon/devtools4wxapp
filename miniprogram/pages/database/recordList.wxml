@@ -1,0 +1,35 @@
+
+<view class="container">
+    <view class="opertion">
+        <button type='primary' bindtap='refresh' size="mini" class="button" style='margin-left:10px;'>刷新</button>
+          <button type='primary' bindtap='showInput' size="mini" class="button" style='margin-left:5px;margin-right 5px; left:8%;'>保存</button>
+          <button type='primary' bindtap='loadSql' size="mini" class="button" style='margin-left:5px;margin-right 5px; left:16%;' >载入</button>
+          <button type='primary' bindtap='queryDatabase' size="mini" class="button" style='margin-left:5px;margin-right 5px; left:23%'>运行</button>
+          <view class="divLine"></view>
+</view>
+        <textarea type="text" style='width: 100%;' bindinput="inputSql" auto-height rows="2" value='{{sql}}' placeholder="输入sql语句" />
+        <!-- <view class="divLine"></view> -->
+        
+    <scroll-view class="table-wrapper" scroll-y>
+    <view class="{{inputVisible?'inputVisible':'inputInVisible'}}">
+      <input placeholder='给sql取个名字吧' style='width:60%;height:30px;border:1px solid #CCCCCC;border-radius:5px;display:inline;margin-left:3px;' bindinput='inputSqlName' value='{{sqlName}}'></input>
+      <button type='primary' bindtap='saveSql' size="mini" class="button" style='margin-left:5px;'>确定</button>
+      <button type='primary' bindtap='cancelSave' size="mini" class="button" style='margin-left:5px;'>取消</button>
+    </view>
+        <table class="fl-table">
+            <thead>
+                <tr wx:for-items="{{columnHeader}}" wx:key="item" wx:for-index="index">
+                    <th>{{item}}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr wx:for="{{resultArray}}" wx:for-item="item" wx:key="item" wx:for-index="index" bindlongpress="showOperation" data-record="{{item}}">
+                    <td wx:for="{{columnHeader}}" wx:key="cell" wx:for-item="cell">{{item[cell]}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <view wx:if="{{noRecord}}">无记录</view>
+    </scroll-view>
+</view>
+
+

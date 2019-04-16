@@ -1,0 +1,41 @@
+<view class="container">
+   <view class="bg">
+   <text class="item-header">
+        使用前必读
+       </text>
+       <text class="item-title">
+        数据隐私和工作方式
+       </text>
+       <text class="item-content">
+          本功能通过调用小程序的云函数将您的操作请求转发至您的服务器，并将服务器响应数据返回至小程序客户端
+  数据流：用户发送指令给客户端=>小程序客户端调用云函数(node.js代码)=>云函数连接您的服务器执行指令=>返回结果至小程序客户端=>渲染数据。
+本功能充当您的小程序客户端和您的服务器的代理服务器的角色。这意味着小程序客户端无法直接和您的服务器进行通信。
+本小程序专为匿名使用而设计，不收集您的任何信息。我不知道您是谁，您正在连接的主机或您输入的内容。
+本功能数据安全性由小程序所提供的API和node.js提供保障
+       </text>
+       <text class="item-title">
+        功能
+       </text>
+       <text class="item-content">
+        由于技术有限，MySQL只支持基本的增删改查和执行sql语句操作，Linux
+        无法支持显示所有的命令操作的响应结果，但发送的命令都真实有效，请谨慎操作。
+        建议使用本功能来查询一些服务器的信息和练习常用命令，不建议操作产品级的重要服务
+        建议使用的命令如：ls, jps, ps , mkdir, ifconfig, java -version, last, history等
+        不建议使用的命令：vim, java -jar xxx.jar(可以使用nohup java -jar xxx.jar &代替，在后台运行)等，详细的文档和更多的功能将在得到支持后完善
+       </text>
+       <text class="item-title">
+        反馈
+       </text>
+       <text class="item-content">
+        去本小程序的GitHub地址： https://github.com/
+        javthon/devtools4wxapp
+        或者关注微信公众号ClumsyRobot提bug或建议
+        如果觉得本小程序还不错就在GitHub上给颗星星哦
+       </text>
+       <text class="item-right">
+       ——开发者
+       </text>
+       <button type='primary' bindtap='goback' size="mini" class="button" style='margin-left:25%;margin-top:150px;'>返回</button>
+          <button type='primary' bindtap='goon' size="mini" class="button" style='margin-left:5px;margin-right 5px; left:8%;'>继续</button>
+   </view>
+</view>

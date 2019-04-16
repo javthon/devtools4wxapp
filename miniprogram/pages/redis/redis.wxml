@@ -1,0 +1,31 @@
+
+<!--ranklist.wxml-->
+<view class="container">
+  <view style='display:inline;width:100%;'>
+  <image style="width:50px;height:50px;" src="./logout.png" background-size="cover" bindtap='logout'></image>
+  <image style="width:50px;height:50px;margin-left:27%" src="./add.png" background-size="cover" bindtap='showInput'></image>
+  <image style="width:50px;height:50px;margin-left:27%" src="./back.png" background-size="cover" bindtap='returnLast'></image>
+  </view>
+  <view class="{{inputVisible?'inputVisible':'inputInVisible'}}">
+      <view class="divLine"></view>
+      <scroll-view style='height:100px;' scroll-y>
+      <textarea type="text" style='width: 100%;color:white' bindinput="inputData" maxlength="-1" rows="3"  value='{{result}}'  />
+        </scroll-view>
+        <view class="divLine"></view>
+        <view style='display: flex;flex-direction: row;margin-top:5px;'>
+      <input placeholder='给key取个名字吧' style='width:55%;height:30px;border:1px solid #000000;border-radius:5px;display:inline;margin-left:3px;' bindinput='inputNewKey' value='{{newKey}}'></input>
+      <button type='primary' bindtap='saveData' size="mini" style='margin-left:5px;' class="button" >确定</button>
+      <button type='primary' bindtap='cancelSave' size="mini" style='margin-left:5px;'>取消</button>
+      </view>
+    </view>
+    
+  <scroll-view class="list" scroll-y>
+      <view wx:for-items="{{currentKeyArray}}" wx:key="item" wx:for-index="index">
+          <view class="item" data-key="{{item}}" bindtap='getValue'>
+                  <view class="center">
+                     <text class="index">{{item}}</text>
+                  </view>
+          </view>
+        </view>
+    </scroll-view>
+</view>

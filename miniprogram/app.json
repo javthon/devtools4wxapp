@@ -1,0 +1,30 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/redis/redis",
+    "pages/redis/login",
+    "pages/lab/lab",
+    "pages/redis/result",
+    "pages/linux/linux",
+    "pages/linux/login",
+    "pages/index/introduction",
+    "pages/readme/readme",
+    "pages/database/login",
+    "pages/database/databaseList",
+    "pages/database/recordList",
+    "pages/database/savedSqlList",
+    "pages/database/tableList",
+    "pages/database/singleData"
+  ],
+  "navigateToMiniProgramAppIdList": [
+    "wxf5ccb7793b84ce19",
+    "wx0033f6ea238e305c"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "Java实用工具",
+    "navigationBarTextStyle": "black"
+  }
+}

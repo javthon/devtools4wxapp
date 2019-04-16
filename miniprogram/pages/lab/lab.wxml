@@ -1,0 +1,42 @@
+<view class="table-wrapper">
+    <table class="fl-table">
+        <thead>
+        <tr>
+            <th>模块</th>
+            <th>域名</th>
+            <th>ip</th>
+            <th>端口</th>
+            <th>用户名</th>
+            <th>密码</th>
+            <th>有效期</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>MySQL</td>
+            <td>nanmatou.club</td>
+            <td>118.25.181.142</td>
+            <td>3306</td>
+            <td>public</td>
+            <td>public</td>
+            <td>2020-07-01</td>
+            <td>
+              <button type='primary' bindtap='jumpToMysql' data-mysql="118.25.181.142,3306,public,public" size="mini" class="button">访问</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Redis</td>
+            <td>nanmatou.club</td>
+            <td>118.25.181.142</td>
+            <td>6379</td>
+            <td>无</td>
+            <td>test666</td>
+            <td>2020-07-01</td>
+            <td>
+              <button type='primary' bindtap='jumpToRedis' data-redis="118.25.181.142,6379,test666" size="mini" class="button">访问</button>
+            </td>
+        </tr>
+        </tbody>
+   </table>
+</view>

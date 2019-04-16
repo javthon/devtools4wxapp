@@ -1,0 +1,74 @@
+
+page, .container{
+  width: 100%;
+  height: 800px;
+   background: #87CB16;
+    background: -moz-linear-gradient(top, #87CB16 0%, #6dc030 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #87CB16), color-stop(100%, #6dc030));
+    background: -webkit-linear-gradient(top, #87CB16 0%, #6dc030 100%);
+    background: -o-linear-gradient(top, #87CB16 0%, #6dc030 100%);
+    background: -ms-linear-gradient(top, #87CB16 0%, #6dc030 100%);
+    background: linear-gradient(to bottom, #87CB16 0%, #6dc030 100%);
+}
+
+.inputVisible{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2px;
+}
+
+.inputInVisible{
+  display: none;
+}
+
+.container .opertion{ 
+  width: 100%;
+  padding-top: 6px;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+}
+
+list{
+  height:100%;
+  width: 100%;
+  
+}
+
+.divLine{
+ border: #FFFFFF solid 2px;
+ width: 100%;
+}
+
+.list .item{
+  width: 100%;
+  height: 75px;
+  display: flex;
+  flex-direction:row;
+  color: #FFFFFF;
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.23);
+  margin-top:10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+
+.list .index{
+  margin-top: 23px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+
+
+.list .center{
+  display: inline-block;
+  margin-top: 20px;
+  width: 100%;
+  font-size: 25px;
+  overflow:hidden;
+  white-space:nowrap;
+  text-align: center;
+}
+
