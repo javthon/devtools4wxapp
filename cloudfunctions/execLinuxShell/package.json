@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "ssh2": "^0.8.2",
+    "ssh2": "^1.4.0",
     "wx-server-sdk": "^0.2.2"
   }
 }
